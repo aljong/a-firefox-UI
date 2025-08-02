@@ -4093,14 +4093,15 @@
     }
   }
 }
+/*tab-height*/
 @supports -moz-bool-pref("userChrome.padding.tabbar_height") {
   /* Toolbar Height */
   @supports -moz-bool-pref("userChrome.tab.lepton_like_padding") {
     :root:not([uidensity]) {
-      --tab-min-height: 36px !important;
+      --tab-min-height: 40px !important;
     }
     :root[uidensity="compact"] {
-      --tab-min-height: 32px !important;
+      --tab-min-height: 40px !important;
     }
     :root[uidensity="touch"] {
       --tab-min-height: 41px !important;
@@ -4108,10 +4109,10 @@
   }
   @supports -moz-bool-pref("userChrome.tab.photon_like_padding") {
     :root:not([uidensity]) {
-      --tab-min-height: 32px !important;
+      --tab-min-height: 40px !important;
     }
     :root[uidensity="compact"] {
-      --tab-min-height: 29px !important;
+      --tab-min-height: 40px !important;
     }
     :root[uidensity="touch"] {
       --tab-min-height: 41px !important;
@@ -7151,7 +7152,8 @@
   .tab-context-line {
     display: inline-flex !important;
     display: -moz-inline-box !important;
-    height: 2px !important;
+    /*change to 3px*/
+    height: 3px !important;
     border-radius: var(--tab-border-radius, 4px) var(--tab-border-radius, 4px) 0 0 !important;
   }
   .tabbrowser-tab:is([selected], [multiselected]) .tab-context-line {
